@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Based on [AdminLTE 3 Alpha-2 admin template](https://github.com/almasaeed2010/AdminLTE), build a Rails 5 template app
 
-Things you may want to cover:
+Check [Latests v3 alpha releases](https://github.com/almasaeed2010/AdminLTE/releases)
 
-* Ruby version
+I'm going to build [starter page](https://adminlte.io/themes/AdminLTE/starter.html) at first
 
-* System dependencies
+Stack:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* AdminLTE 3
+* Bootstrap 4
+* jQuery 3
+* Rails 5.2
+* Ruby 2.5.1
