@@ -16,5 +16,6 @@
 //= require popper
 //= require bootstrap
 //= require activestorage
+//= require adminlte
 //= require_tree .
 
