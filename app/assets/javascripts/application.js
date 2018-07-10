@@ -19,3 +19,9 @@
 //= require adminlte
 //= require_tree .
 
+$(window).on('turbolinks:load', () => {
+  // sets min-with for body to show footer aligned to bottom
+  adminlte.Layout._jQueryInterface.call($('body'))
+})
+
+

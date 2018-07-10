@@ -1,0 +1,32 @@
+section.content-header
+  .container-fluid
+    .row.mb-2
+      .col-sm-6
+        h1
+          | 500 Error Page
+      .col-sm-6
+        ol.breadcrumb.float-sm-right
+          li.breadcrumb-item
+            a[href="#{root_path}"]
+              | Home
+          li.breadcrumb-item.active
+            | 500 Error Page
+section.content
+  .error-page
+    h2.headline.text-danger
+      | 500
+    .error-content
+      h3
+        i.fa.fa-warning.text-danger
+        |  Oops! Something went wrong.
+      p
+        |  We will work on fixing that right away. Meanwhile, you may 
+      a[href="#{admin_index_path}"]
+        | return to dashboard
+        |  or try using the search form. 
+      form.search-form
+        .input-group
+          input.form-control[type="text" name="search" placeholder="Search"]
+          .input-group-append
+            button.btn.btn-danger[type="submit" name="submit"]
+              i.fa.fa-search
