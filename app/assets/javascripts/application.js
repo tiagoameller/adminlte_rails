@@ -13,6 +13,7 @@
 //= require jquery3
 //= require jquery_ujs
 //= require turbolinks
+//= require icheck
 //= require popper
 //= require bootstrap
 //= require activestorage
@@ -21,7 +22,14 @@
 
 $(window).on('turbolinks:load', () => {
   // sets min-with for body to show footer aligned to bottom
-  adminlte.Layout._jQueryInterface.call($('body'))
+  adminlte.Layout._jQueryInterface.call($('body'));
+
+  $('input').iCheck({
+    checkboxClass: 'icheckbox_square-blue',
+    radioClass: 'iradio_square-blue',
+    increaseArea: '20%' // optional
+  });
+
 })
 
 

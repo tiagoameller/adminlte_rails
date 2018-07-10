@@ -1,0 +1,41 @@
+.register-box
+  .register-logo
+    a[href="#{root_path}"]
+      b
+        | Admin
+      | LTE
+  .card
+    .card-body.register-card-body
+      p.login-box-msg
+        | Register a new membership
+      form[action="#{root_path}" method="post"]
+        .form-group.has-feedback
+          input.form-control[type="text" placeholder="Full name"]
+        .form-group.has-feedback
+          input.form-control[type="email" placeholder="Email"]
+        .form-group.has-feedback
+          input.form-control[type="password" placeholder="Password"]
+        .form-group.has-feedback
+          input.form-control[type="password" placeholder="Retype password"]
+        .row
+          .col-8
+            .checkbox.icheck
+              label
+                input[type="checkbox"]
+                |  I agree to the
+                a[href="#"]
+                  |  terms
+          .col-4
+            button.btn.btn-primary.btn-block.btn-flat[type="submit"]
+              | Register
+      .social-auth-links.text-center
+        p
+          | - OR -
+        a.btn.btn-block.btn-primary[href="#"]
+          i.fa.fa-facebook.mr-2
+          |  Sign up using Facebook
+        a.btn.btn-block.btn-danger[href="#"]
+          i.fa.fa-google-plus.mr-2
+          |  Sign up using Google+
+      a.text-center[href="#{signin_path}"]
+        | I already have a membership

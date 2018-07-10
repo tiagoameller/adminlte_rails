@@ -1,5 +1,5 @@
 aside.main-sidebar.sidebar-dark-primary.elevation-4
-  a.brand-link[href="index3.html"]
+  a.brand-link[href="#{root_path}"]
     img.brand-image.img-circle.elevation-3[src="#{image_path('starter/AdminLTELogo.png')}" alt="AdminLTE Logo" style="opacity: .8"]
     span.brand-text.font-weight-light
       | AdminLTE 3
@@ -12,11 +12,11 @@ aside.main-sidebar.sidebar-dark-primary.elevation-4
           | Alexander Pierce
     nav.mt-2
       ul.nav.nav-pills.nav-sidebar.flex-column[data-widget="treeview" role="menu" data-accordion="false"]
-        li.nav-item.has-treeview class="#{@menu_open_class}"
+        li.nav-item.has-treeview class="#{'menu-open' if controller_name == 'admin'}"
           a.nav-link.active[href="#"]
             i.nav-icon.fa.fa-dashboard
             p
-              |Starter Pages 
+              |Starter Pages
               i.right.fa.fa-angle-left
           ul.nav.nav-treeview
             li.nav-item
@@ -33,28 +33,47 @@ aside.main-sidebar.sidebar-dark-primary.elevation-4
               a.nav-link[href="#"]
                 i.nav-icon.fa.fa-th
                 p
-                  | Simple Link 
+                  | Simple Link
                   span.right.badge.badge-danger
                     | New
-        li.nav-item.has-treeview class="#{@menu_open_class}"
+
+        li.nav-item.has-treeview class="#{'menu-open' if controller_name == 'extras'}"
           a.nav-link[href="#"]
             i.nav-icon.fa.fa-plus-square-o
             p
-              |  Extras 
+              |  Extras
               i.fa.fa-angle-left.right
           ul.nav.nav-treeview
             li.nav-item
-              a.nav-link class="#{(action_name == 'not_found_page' ? 'active' : '')}" href="#{admin_not_found_page_path}"
+              a.nav-link class="#{'active' if action_name == 'not_found_page'}" href="#{not_found_page_path}"
                 i.fa.fa-circle-o.nav-icon
                 p
                   | Error 404
             li.nav-item
-              a.nav-link class="#{(action_name == 'error_page' ? 'active' : '')}" href="#{admin_error_page_path}"
+              a.nav-link class="#{'active' if action_name == 'error_page'}" href="#{error_page_path}"
                 i.fa.fa-circle-o.nav-icon
                 p
                   | Error 500
             li.nav-item
-              a.nav-link class="#{(action_name == 'blank_page' ? 'active' : '')}" href="#{admin_blank_page_path}"
+              a.nav-link class="#{'active' if action_name == 'blank_page'}" href="#{blank_page_path}"
                 i.fa.fa-circle-o.nav-icon
                 p
                   | Blank Page
+
+        li.nav-item.has-treeview class="#{'menu-open' if controller_name == 'pages'}"
+          a.nav-link[href="#"]
+            i.nav-icon.fa.fa-plus-square-o
+            p
+              |  Pages
+              i.fa.fa-angle-left.right
+          ul.nav.nav-treeview
+            li.nav-item
+              a.nav-link class="#{'active' if action_name == 'signin'}" href="#{signin_path}"
+                i.fa.fa-sign-in.nav-icon
+                p
+                  | Signin
+            li.nav-item
+              a.nav-link class="#{'active' if action_name == 'signup'}" href="#{signup_path}"
+                i.fa.fa-sign-out.nav-icon
+                p
+                  | Signup

@@ -46,6 +46,10 @@ gem 'simplecov', :require => false, :group => :test
 gem "factory_bot_rails", "~> 4.0"
 gem "local_time"
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-icheck'
+end
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'rspec-rails', '~> 3.5'
