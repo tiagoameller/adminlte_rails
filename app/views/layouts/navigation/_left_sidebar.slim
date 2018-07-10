@@ -16,19 +16,19 @@ aside.main-sidebar.sidebar-dark-primary.elevation-4
           a.nav-link.active[href="#"]
             i.nav-icon.fa.fa-dashboard
             p
-              |Starter Pages
+              |Admin Pages
               i.right.fa.fa-angle-left
           ul.nav.nav-treeview
             li.nav-item
-              a.nav-link.active[href="#"]
+              a.nav-link class="#{'active' if action_name == 'index'}" href="#{admin_index_path}"
                 i.fa.fa-circle-o.nav-icon
                 p
-                  |Active Page
+                  |Starter page
             li.nav-item
-              a.nav-link[href="#"]
+              a.nav-link class="#{'active' if action_name == 'datatables'}" href="#{admin_datatables_path}"
                 i.fa.fa-circle-o.nav-icon
                 p
-                  |Inactive Page
+                  |Data tables
             li.nav-item
               a.nav-link[href="#"]
                 i.nav-icon.fa.fa-th

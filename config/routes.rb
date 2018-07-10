@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'admin/index'
+  get 'admin/datatables'
 
   scope 'extras', controller: :extras do
     get :not_found_page

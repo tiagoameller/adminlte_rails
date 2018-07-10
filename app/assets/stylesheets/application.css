@@ -12,4 +12,6 @@
  *
  *= require import
  *= require 'icheck/skins/square/blue'
+ *= require 'datatables-bootstrap'
+ *= require 'jquery.dataTables'
  */

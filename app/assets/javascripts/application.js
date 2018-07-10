@@ -15,7 +15,8 @@
 //= require turbolinks
 //= require icheck
 //= require popper
-//= require bootstrap
+//= require jquery.dataTables
+//= require datatables-bootstrap
 //= require activestorage
 //= require adminlte
 //= require_tree .
@@ -30,6 +31,14 @@ $(window).on('turbolinks:load', () => {
     increaseArea: '20%' // optional
   });
 
+  $('#example1').DataTable({
+    // "paging": true,
+    // "lengthChange": false,
+    // "searching": false,
+    // "ordering": true,
+    // "info": true,
+    // "autoWidth": false
+  });
 })
 
 
