@@ -48,7 +48,7 @@ gem "local_time"
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-icheck'
-  gem 'rails-assets-datatables-bootstrap'
+  # gem 'rails-assets-datatables-bootstrap'
 end
 
 group :development, :test do

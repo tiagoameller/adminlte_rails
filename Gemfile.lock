@@ -152,12 +152,6 @@ GEM
       bundler (>= 1.3.0)
       railties (= 5.2.0)
       sprockets-rails (>= 2.0.0)
-    rails-assets-bootstrap (4.1.1)
-    rails-assets-datatables (1.10.16)
-      rails-assets-jquery (>= 1.7.0)
-    rails-assets-datatables-bootstrap (1.0.0)
-      rails-assets-bootstrap (>= 1.0.0)
-      rails-assets-datatables (>= 1.0.0)
     rails-assets-icheck (1.0.2)
       rails-assets-jquery (>= 1.7)
     rails-assets-jquery (3.3.1)
@@ -268,7 +262,6 @@ DEPENDENCIES
   pry-byebug
   puma (~> 3.11)
   rails (~> 5.2.0)
-  rails-assets-datatables-bootstrap!
   rails-assets-icheck!
   rspec-rails (~> 3.5)
   sass-rails (~> 5.0)

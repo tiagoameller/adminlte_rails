@@ -16,7 +16,7 @@
 //= require icheck
 //= require popper
 //= require jquery.dataTables
-//= require datatables-bootstrap
+//= require dataTables.bootstrap4
 //= require activestorage
 //= require adminlte
 //= require_tree .
@@ -32,12 +32,13 @@ $(window).on('turbolinks:load', () => {
   });
 
   $('#example1').DataTable({
-    // "paging": true,
-    // "lengthChange": false,
-    // "searching": false,
-    // "ordering": true,
-    // "info": true,
-    // "autoWidth": false
+    "paging": true,
+    "lengthChange": true,
+    "searching": true,
+    "ordering": true,
+    "info": true,
+    // "pagingType": "full_numbers",
+    "autoWidth": true
   });
 })
 
