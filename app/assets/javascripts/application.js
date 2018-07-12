@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require icheck
 //= require popper
+//= require bootstrap
 //= require jquery.dataTables
 //= require dataTables.bootstrap4
 //= require activestorage
