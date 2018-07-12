@@ -24,22 +24,6 @@
 $(window).on('turbolinks:load', () => {
   // sets min-with for body to show footer aligned to bottom
   adminlte.Layout._jQueryInterface.call($('body'));
-
-  $('input').iCheck({
-    checkboxClass: 'icheckbox_square-blue',
-    radioClass: 'iradio_square-blue',
-    increaseArea: '20%' // optional
-  });
-
-  $('#example1').DataTable({
-    "paging": true,
-    "lengthChange": true,
-    "searching": true,
-    "ordering": true,
-    "info": true,
-    // "pagingType": "full_numbers",
-    "autoWidth": true
-  });
 })
 
 
