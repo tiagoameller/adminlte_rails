@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require icheck
-//= require popper
 //= require bootstrap/dist/js/bootstrap
 //= require jquery.dataTables
 //= require dataTables.bootstrap4
