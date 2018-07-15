@@ -13,6 +13,5 @@
  *= require bootstrap/dist/css/bootstrap
  *= require import
  *= require 'icheck/skins/square/blue'
- *= require 'jquery.dataTables'
- *= require 'dataTables.bootstrap4'
+ *= require 'datatables.net-bs4/css/dataTables.bootstrap4'
  */
