@@ -1,5 +1,10 @@
 {
   "name": "sisfirma",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.1.2",
+    "icheck": "^1.0.2",
+    "jquery": "^3.3.1",
+    "popper": "^1.0.1"
+  }
 }

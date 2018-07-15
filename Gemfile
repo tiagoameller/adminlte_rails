@@ -38,18 +38,12 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # from build SaaS book
 gem 'jquery-rails'
-gem 'bootstrap', '~> 4.1.1'
 gem 'friendly_id', '~> 5.1.0'
 gem "slim-rails"
 gem 'kaminari'
 gem 'simplecov', :require => false, :group => :test
 gem "factory_bot_rails", "~> 4.0"
 gem "local_time"
-
-source 'https://rails-assets.org' do
-  gem 'rails-assets-icheck'
-  # gem 'rails-assets-datatables-bootstrap'
-end
 
 group :development, :test do
   gem 'pry-byebug'
