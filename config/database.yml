@@ -82,4 +82,4 @@ production:
   <<: *default
   database: sisfirma_production
   username: sisfirma
-  password: <%= ENV['SISFIRMA_DATABASE_PASSWORD'] %>
+  password: <%= ENV['SISFIRMA_DATABASE_PASSWORD'] || Rails.application.credentials.dig(:postgres, :password, :production) %>
