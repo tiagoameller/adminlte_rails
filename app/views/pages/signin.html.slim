@@ -9,10 +9,14 @@
       p.login-box-msg
         | Sign in to start your session
       form[action="#{root_path}" method="post"]
-        .form-group.has-feedback
+        .input-group.mb-3
           input.form-control[type="email" placeholder="Email"]
-        .form-group.has-feedback
+            .input-group-append
+              span.fa.fa-envelope.input-group-text
+        .input-group.mb-3
           input.form-control[type="password" placeholder="Password"]
+            .input-group-append
+              span.fa.fa-lock.input-group-text
         .row
           .col-8
             .checkbox.icheck

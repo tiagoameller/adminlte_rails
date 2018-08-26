@@ -9,14 +9,22 @@
       p.login-box-msg
         | Register a new membership
       form[action="#{root_path}" method="post"]
-        .form-group.has-feedback
+        .input-group.mb-3
           input.form-control[type="text" placeholder="Full name"]
-        .form-group.has-feedback
+            .input-group-append
+              span.fa.fa-user.input-group-text
+        .input-group.mb-3
           input.form-control[type="email" placeholder="Email"]
-        .form-group.has-feedback
+            .input-group-append
+              span.fa.fa-envelope.input-group-text
+        .input-group.mb-3
           input.form-control[type="password" placeholder="Password"]
-        .form-group.has-feedback
+            .input-group-append
+              span.fa.fa-lock.input-group-text
+        .input-group.mb-3
           input.form-control[type="password" placeholder="Retype password"]
+            .input-group-append
+              span.fa.fa-lock.input-group-text
         .row
           .col-8
             .checkbox.icheck
