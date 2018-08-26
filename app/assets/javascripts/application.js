@@ -13,12 +13,12 @@
 //= require jquery/dist/jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require icheck
+//= require icheck/icheck
 //= require bootstrap/dist/js/bootstrap
 //= require datatables.net/js/jquery.dataTables
 //= require datatables.net-bs4/js/dataTables.bootstrap4
 //= require activestorage
-//= require adminlte
+//= require adminlte/adminlte
 //= require_tree .
 
 $(window).on('turbolinks:load', () => {

@@ -39,12 +39,3 @@
           |  Sign up using Google+
       a.text-center[href="#{signin_path}"]
         | I already have a membership
-
-javascript:
-  $(window).on('turbolinks:load', () => {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' // optional
-    });
-  })
