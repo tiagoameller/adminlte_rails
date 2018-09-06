@@ -63,4 +63,4 @@ class App.DataTableConfig
     $("##{@selector} tbody").on 'click', 'tr', (e) ->
       self.set_selected_id($(this).find('td:first >a:first').data('id'))
       $("##{self.selector} tbody tr").removeClass('table-active')
-      $(this).parent().addClass('table-active')
+      $(this).addClass('table-active')
