@@ -1,0 +1,57 @@
+section.content.pt-2
+  .card.card-primary
+    .card-header
+      h3.card-title
+        | Customer
+    .card-body
+      p
+        strong Email:
+        =< @customer.email
+      p
+        strong Name:
+        =< @customer.name
+      p
+        strong Custid:
+        =< @customer.custid
+      p
+        strong Dob:
+        =< @customer.dob
+      p#customer_active
+        strong Active:
+        =< @customer.active
+        - unless @customer.active?
+          span.ml-1 =< link_to 'Activate', :activate_customer, method: :patch, remote: true, id: 'activate_link', data: { disable_with: 'Activating ...'}
+      p
+        strong Notes:
+        =< @customer.notes
+
+      / description list variation
+      / dl
+      /   dt
+      /     | Email:
+      /   dd
+      /     =< @customer.email
+      /   dt
+      /     | Name:
+      /   dd
+      /     =< @customer.name
+      /   dt
+      /     | Custid:
+      /   dd
+      /     =< @customer.custid
+      /   dt
+      /     | Dob:
+      /   dd
+      /     =< @customer.dob
+      /   dt
+      /     | Active:
+      /   dd
+      /     =< @customer.active
+      /   dt
+      /     | Notes:
+      /   dd
+      /     =< @customer.notes
+    .card-footer
+      = link_to(edit_customer_path(@customer), class: 'btn btn-warning btn_edit') { content_tag(:i, nil, class: 'fas fa-pencil-alt mr-2') + 'Edit'}
+      = link_to(customer_path(@customer), class: 'btn btn-danger btn_delete ml-2', method: :delete, data: { confirm: 'Are you sure?' }) { content_tag(:i, nil, class: 'fa fa-trash mr-2') + 'Delete'}
+      = link_to(customers_path, class: 'btn btn-default float-right') { content_tag(:span, nil, class: 'fas fa-chevron-left') }

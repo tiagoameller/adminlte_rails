@@ -40,12 +40,18 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'factory_bot_rails', '~> 4.0'
 gem 'friendly_id', '~> 5.1.0'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'kaminari'
 gem 'local_time'
 gem 'simplecov', require: false, group: :test
 gem 'slim-rails'
+# https://github.com/plataformatec/simple_form
+gem 'simple_form'
+# https://github.com/codegram/date_validator
+gem 'date_validator'
 
 group :development, :test do
+  gem 'faker'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.5'

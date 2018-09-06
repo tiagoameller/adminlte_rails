@@ -1,0 +1,34 @@
+/ modal forms abandoned due client side validations failed for us
+/ if client side validations worked, in cases where not possible and valide in backend, also
+/ it would result in a bad user experience
+
+.modal.fade#form_modal
+  = simple_form_for @customer do |f|
+    .modal-dialog
+      .modal-content
+        .modal-header
+          h4.modal-title = "#{params[:action].titleize} customer"
+          button[type="button" class="close" data-dismiss="modal"]
+          span[aria-hidden="true"]
+            |&times;
+        .modal-body
+          - if @customer.errors.any?
+            .callout.callout-danger.m-2
+              h5 = "#{pluralize(@customer.errors.count, "error")} prohibited this customer from being saved:"
+              ul
+                - @customer.errors.full_messages.each do |message|
+                  li = message
+
+          = f.input :email
+          = f.input :name
+          = f.input :custid
+          = f.input :dob, \
+            placeholder: "DD/MM/YYYY", \
+            value: format_date(f.object.dob || Time.zone.today), \
+            input_html: { class: 'form-control datepicker' }, \
+            as: :string
+          = f.input :active, wrapper: :icheck
+          = f.input :notes
+        .modal-footer
+          = f.submit(class: "btn btn-#{%w(new create).include?(action_name) ? 'success' : 'warning'}") { content_tag(:i, nil, class: 'fa fa-check mr-2') + 'Update'}
+          = link_to(customers_path, class: 'btn btn-default float-right') { content_tag(:span, nil, class: 'fas fa-chevron-left') }

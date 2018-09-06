@@ -2,11 +2,14 @@
   "name": "sisfirma",
   "private": true,
   "dependencies": {
+    "admin-lte": "^3.0.0-alpha.2",
     "bootstrap": "^4.1.2",
     "datatables.net-bs4": "^1.10.19",
     "icheck": "^1.0.2",
     "jquery": "^3.3.1",
     "popper": "^1.0.1",
-    "popper.js": "^1.14.3"
+    "popper.js": "^1.14.3",
+    "toastr": "^2.1.4",
+    "yarn": "^1.9.4"
   }
 }

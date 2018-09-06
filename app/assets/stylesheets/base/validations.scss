@@ -1,0 +1,28 @@
+// bootstrap
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+// adminlte
+@import "../../../node_modules/admin-lte/build/scss/variables";
+@import "../../../node_modules/admin-lte/build/scss/mixins";
+
+.form-group {
+  label {
+    font-weight: 700;
+  }
+}
+
+.form-group-invalid {
+  label {
+    font-style: italic;
+  }
+  .form-control {
+    border-width: medium;
+    border-color: $form-feedback-invalid-color;
+    border-style: dashed;
+  }
+
+  .invalid-feedback {
+    // overwrite B4 class
+    display: block;
+  }
+}

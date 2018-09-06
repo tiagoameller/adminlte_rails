@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :customers do
+    patch :activate, on: :member
+  end
   get 'admin/index'
   get 'admin/datatables'
 

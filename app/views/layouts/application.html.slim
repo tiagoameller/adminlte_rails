@@ -8,14 +8,19 @@ HTML
     meta[http-equiv="x-ua-compatible" content="ie=edge"]
     = stylesheet_link_tag 'application', media: 'all','data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    = stylesheet_link_tag href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    = stylesheet_link_tag href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
     = stylesheet_link_tag href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"
 
-  body.hold-transition.sidebar-mini
+  body[class="hold-transition sidebar-mini #{controller_name} #{action_name}"]
     .wrapper
       = render 'layouts/navigation/header'
       = render 'layouts/navigation/left_sidebar'
       .content-wrapper
+        - if flash.any?
+          section.content-header[style='padding-bottom: 0']
+            = flash_messages
         = yield
       = render 'layouts/navigation/right_sidebar'
       = render 'layouts/navigation/footer'
+      #remote_container
+

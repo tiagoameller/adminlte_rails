@@ -11,6 +11,8 @@
 // about supported directives.
 //
 //= require jquery/dist/jquery
+//= require jquery-ui/widgets/datepicker
+//= require jquery-ui/i18n/datepicker-es
 //= require jquery_ujs
 //= require turbolinks
 //= require icheck/icheck
@@ -18,12 +20,8 @@
 //= require datatables.net/js/jquery.dataTables
 //= require datatables.net-bs4/js/dataTables.bootstrap4
 //= require activestorage
-//= require adminlte/adminlte
-//= require_tree .
-
-$(window).on('turbolinks:load', () => {
-  // sets min-with for body to show footer aligned to bottom
-  adminlte.Layout._jQueryInterface.call($('body'));
-})
-
-
+//= require admin-lte/dist/js/adminlte
+//= require toastr
+//= require init
+//= require cable
+//= require_tree ./custom

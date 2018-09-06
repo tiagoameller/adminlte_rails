@@ -1,0 +1,9 @@
+// modal forms abandoned due client side validations failed for us
+// if client side validations worked, in cases where not possible and valide in backend, also
+// it would result in a bad user experience
+
+$('#remote_container').html('<%= j render "form_modal" %>');
+$('#form_modal').on('shown.bs.modal', function() {
+  // TODO: set focus on first edit
+  //$('form[data-validate]').enableClientSideValidations();
+}).modal('show');

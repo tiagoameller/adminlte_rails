@@ -12,7 +12,7 @@ aside.main-sidebar.sidebar-dark-primary.elevation-4
           | Alexander Pierce
     nav.mt-2
       ul.nav.nav-pills.nav-sidebar.flex-column[data-widget="treeview" role="menu" data-accordion="false"]
-        li.nav-item.has-treeview class="#{'menu-open' if controller_name == 'admin'}"
+        li.nav-item.has-treeview class="#{'menu-open' if %(admin customers).include? controller_name}"
           a.nav-link.active[href="#"]
             i.nav-icon.fa.fa-dashboard
             p
@@ -20,15 +20,20 @@ aside.main-sidebar.sidebar-dark-primary.elevation-4
               i.right.fa.fa-angle-left
           ul.nav.nav-treeview
             li.nav-item
-              a.nav-link class="#{'active' if action_name == 'index'}" href="#{admin_index_path}"
+              a.nav-link class="#{'active' if controller_name == 'admin' && action_name == 'index'}" href="#{admin_index_path}"
                 i.fa.fa-circle-o.nav-icon
                 p
                   |Starter page
             li.nav-item
-              a.nav-link class="#{'active' if action_name == 'datatables'}" href="#{admin_datatables_path}"
+              a.nav-link class="#{'active' if controller_name == 'admin' && action_name == 'datatables'}" href="#{admin_datatables_path}"
                 i.fa.fa-circle-o.nav-icon
                 p
                   |Data tables
+            li.nav-item
+              a.nav-link class="#{'active' if controller_name == 'customers' }" href="#{customers_path}"
+                i.fa.fa-circle-o.nav-icon
+                p
+                  |Customers
             li.nav-item
               a.nav-link[href="#"]
                 i.nav-icon.fa.fa-th
