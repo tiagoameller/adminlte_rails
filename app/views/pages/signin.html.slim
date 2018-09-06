@@ -5,18 +5,18 @@
         | Admin
       | LTE
   .card
-    .card-body.login-card-body
+    .card-body.login-box-body
       p.login-box-msg
         | Sign in to start your session
       form[action="#{root_path}" method="post"]
         .input-group.mb-3
           input.form-control[type="email" placeholder="Email"]
             .input-group-append
-              span.fa.fa-envelope.input-group-text
+              = fa_icon 'envelope', class: 'input-group-text'
         .input-group.mb-3
           input.form-control[type="password" placeholder="Password"]
             .input-group-append
-              span.fa.fa-lock.input-group-text
+              = fa_icon 'lock', class: 'input-group-text'
         .row
           .col-8
             .checkbox.icheck
@@ -30,10 +30,10 @@
         p
           | - OR -
         a.btn.btn-block.btn-primary[href="#"]
-          i.fa.fa-facebook.mr-2
+          = fa_icon 'facebook', class: 'mr-2'
           |  Sign in using Facebook
         a.btn.btn-block.btn-danger[href="#"]
-          i.fa.fa-google-plus.mr-2
+          = fa_icon 'google-plus', class: 'mr-2'
           |  Sign in using Google+
       p.mb-1
         a[href="#"]

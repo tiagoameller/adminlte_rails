@@ -52,6 +52,5 @@ section.content.pt-2
       /   dd
       /     =< @customer.notes
     .card-footer
-      = link_to(edit_customer_path(@customer), class: 'btn btn-warning btn_edit') { content_tag(:i, nil, class: 'fas fa-pencil-alt mr-2') + 'Edit'}
-      = link_to(customer_path(@customer), class: 'btn btn-danger btn_delete ml-2', method: :delete, data: { confirm: 'Are you sure?' }) { content_tag(:i, nil, class: 'fa fa-trash mr-2') + 'Delete'}
-      = link_to(customers_path, class: 'btn btn-default float-right') { content_tag(:span, nil, class: 'fas fa-chevron-left') }
+      = link_to(edit_customer_path(@customer), class: 'btn btn-warning btn_edit') { fa_icon('pencil', class: 'mr-2') + 'Edit' }
+      == render 'form_footer_buttons'

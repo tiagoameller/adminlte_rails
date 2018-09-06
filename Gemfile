@@ -49,6 +49,8 @@ gem 'slim-rails'
 gem 'simple_form'
 # https://github.com/codegram/date_validator
 gem 'date_validator'
+# https://github.com/bokmann/font-awesome-rails
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'faker'

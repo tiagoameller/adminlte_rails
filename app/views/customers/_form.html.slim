@@ -17,5 +17,5 @@
     = f.input :active, wrapper: :icheck
     = f.input :notes
   .card-footer
-    = f.submit(class: "btn btn-#{%w(new create).include?(action_name) ? 'success' : 'warning'}") { content_tag(:i, nil, class: 'fa fa-check mr-2') + 'Update'}
-    = link_to(customers_path, class: 'btn btn-default float-right') { content_tag(:span, nil, class: 'fas fa-chevron-left') }
+    = f.submit(class: "btn btn-#{%w(new create).include?(action_name) ? 'success' : 'warning'}")
+    == render 'form_footer_buttons'

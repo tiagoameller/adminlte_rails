@@ -53,7 +53,7 @@ class App.DataTableConfig
     # dynamically add a clear filter button
     $("##{@selector}_filter").append(
         "<button class='btn btn-default btn-sm' type='button'>" +
-        "<i class='fas fa-times-circle'></i></button>"
+        "<i class='fa fa-times-circle'></i></button>"
     ).on 'click', (e) ->
       $('input[type=search]').val('').focus()
       data_table.fnFilter('')

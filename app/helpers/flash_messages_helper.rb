@@ -14,13 +14,13 @@ module FlashMessagesHelper
         end
         concat(content_tag(:h5) do
           if bootstrap_class == 'alert-success'
-            concat content_tag(:span, '<i class="fa fa-check"></i>'.html_safe, 'aria-hidden' => true)
+            concat fa_icon('check')
           elsif bootstrap_class == 'alert-danger'
-            concat content_tag(:span, '<i class="fa fa-ban"></i>'.html_safe, 'aria-hidden' => true)
+            concat fa_icon('ban')
           elsif bootstrap_class == 'alert-warning'
-            concat content_tag(:span, '<i class="fa fa-exclamation-triangle"></i>'.html_safe, 'aria-hidden' => true)
+            concat fa_icon('exclamation-triangle')
           else
-            concat content_tag(:span, '<i class="fa fa-info"></i>'.html_safe, 'aria-hidden' => true)
+            concat fa_icon('info')
           end.concat ' ' + bootstrap_class # TODO: localize
         end)
         concat message
