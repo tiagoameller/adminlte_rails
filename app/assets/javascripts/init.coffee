@@ -35,6 +35,31 @@ App.init = ->
   }
   $('.datepicker').datepicker($.datepicker.regional['es'])
 
+  # Override the default confirm dialog by rails
+  $.rails.allowAction = (link) ->
+    return true unless link.data('confirm')
+    $.rails.showConfirmationDialog link
+    false
+
+  # User click confirm button
+  $.rails.confirmed = (link) ->
+    link.data 'confirm', null
+    link.trigger 'click.rails'
+
+  # Display the confirmation dialog
+  $.rails.showConfirmationDialog = (link) ->
+    message = link.data('confirm')
+    swal(
+      {
+        title: message
+        type: 'warning'
+        showCancelButton: true
+        reverseButtons: true
+      }
+    ).then (result) ->
+      $.rails.confirmed link if result.value
+
+  # page specific js
   new App.DataTableConfig('customers_table') if page.controller('customers') && page.action('index')
 
 # event binding

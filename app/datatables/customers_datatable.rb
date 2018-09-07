@@ -20,7 +20,12 @@ class CustomersDatatable < ApplicationDatatable
           column << customer.active
           column << customer.notes
           column << link_to(edit_customer_path(customer), class: 'btn btn-warning btn-sm btn_edit') { fa_icon('pencil') }
-          column << link_to(customer, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm btn_delete') { fa_icon('trash') }
+          column << link_to(
+            customer,
+            method: :delete,
+            data: { confirm: 'Are you sure?', disable_with: '...' },
+            class: 'btn btn-danger btn-sm btn_delete'
+          ) { fa_icon('trash') }
         end
       end
     end

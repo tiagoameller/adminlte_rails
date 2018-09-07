@@ -72,6 +72,8 @@ class CustomersController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_customer
     @customer = Customer.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    redirect_to customers_path, flash: { error: 'Customer not found' }
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

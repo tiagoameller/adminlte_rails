@@ -9,6 +9,7 @@
     "jquery": "^3.3.1",
     "popper": "^1.0.1",
     "popper.js": "^1.14.3",
+    "sweetalert2": "^7.26.28",
     "toastr": "^2.1.4",
     "yarn": "^1.9.4"
   }

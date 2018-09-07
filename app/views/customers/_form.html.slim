@@ -17,5 +17,5 @@
     = f.input :active, wrapper: :icheck
     = f.input :notes
   .card-footer
-    = f.submit(class: "btn btn-#{%w(new create).include?(action_name) ? 'success' : 'warning'}")
+    = f.submit(class: "btn btn-#{%w(new create).include?(action_name) ? 'success' : 'warning'}", data: { disable_with: 'Saving ...'})
     == render 'form_footer_buttons'
