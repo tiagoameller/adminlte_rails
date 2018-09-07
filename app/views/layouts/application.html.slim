@@ -10,7 +10,7 @@ HTML
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"
 
-  body[class="hold-transition sidebar-mini #{controller_name} #{action_name}"]
+  = content_tag :body, class: 'hold-transition sidebar-mini', data: { action: action_name, controller: controller_name } do
     .wrapper
       = render 'layouts/navigation/header'
       = render 'layouts/navigation/left_sidebar'
