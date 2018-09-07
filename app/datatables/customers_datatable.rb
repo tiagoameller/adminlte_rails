@@ -10,16 +10,18 @@ class CustomersDatatable < ApplicationDatatable
   end
 
   def data
-    customers.map do |customer|
-      [].tap do |column|
-        column << link_to(customer.formated_custid, customer, data: { id: customer.id })
-        column << customer.name
-        column << customer.email
-        column << customer.dob
-        column << customer.active
-        column << customer.notes
-        column << link_to(edit_customer_path(customer), class: 'btn btn-warning btn-sm btn_edit') { fa_icon('pencil') }
-        column << link_to(customer, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm btn_delete') { fa_icon('trash') }
+    customers.map do |model|
+      present(model) do |customer|
+        [].tap do |column|
+          column << link_to(customer.formatted_custid, customer, data: { id: customer.id })
+          column << customer.name
+          column << customer.email
+          column << customer.full_dob
+          column << customer.active
+          column << customer.notes
+          column << link_to(edit_customer_path(customer), class: 'btn btn-warning btn-sm btn_edit') { fa_icon('pencil') }
+          column << link_to(customer, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm btn_delete') { fa_icon('trash') }
+        end
       end
     end
   end

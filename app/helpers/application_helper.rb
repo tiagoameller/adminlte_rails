@@ -1,4 +1,10 @@
 module ApplicationHelper
+  def present(model, presenter_class = nil)
+    klass = presenter_class || "#{model.class}Presenter".constantize
+    presenter = klass.new(model, self)
+    yield(presenter) if block_given?
+  end
+
   def format_date(date)
     date.present? ? I18n.l(date, format: '%0d/%0m/%Y') : I18n.t('views.undefined')
   end

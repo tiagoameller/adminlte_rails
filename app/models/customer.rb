@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: customers
+#
+#  id         :bigint(8)        not null, primary key
+#  email      :string
+#  name       :string
+#  custid     :integer
+#  dob        :date
+#  notes      :text
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  active     :boolean          default(TRUE)
+#
+
 class Customer < ApplicationRecord
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
   validates :name, presence: true
@@ -5,10 +20,6 @@ class Customer < ApplicationRecord
   validates :dob,
             date: { before: proc { Time.zone.now - 18.years } }
   validate :must_be_active
-
-  def formated_custid
-    format('%05d', custid)
-  end
 
   private
 

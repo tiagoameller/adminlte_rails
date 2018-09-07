@@ -1,4 +1,0 @@
-{
-    // Filepath to the configuration file for Rubocop
-    "ruby.rubocop.configFilePath": "/home/tiago/.rubocop.yml"
-}

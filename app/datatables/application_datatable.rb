@@ -2,6 +2,7 @@ class ApplicationDatatable
   delegate :params, to: :@view
   delegate :link_to, to: :@view
   delegate :content_tag, to: :@view
+  delegate :present, to: :@view
 
   def initialize(view)
     @view = view
