@@ -14,7 +14,7 @@ class CustomersDatatable < ApplicationDatatable
       present(model) do |customer|
         [].tap do |column|
           column << link_to(customer.formatted_custid, customer, data: { id: customer.id })
-          column << customer.name
+          column << customer.name.full
           column << customer.email
           column << customer.full_dob
           column << customer.active
@@ -52,6 +52,6 @@ class CustomersDatatable < ApplicationDatatable
   end
 
   def columns
-    %w(custid name email dob active notes)
+    %w(custid first_name last_name email dob active notes)
   end
 end

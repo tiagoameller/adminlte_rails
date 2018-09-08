@@ -64,7 +64,10 @@ class CustomersController < ApplicationController
   end
 
   def activate
-    @customer.update(active: true) unless @customer.active?
+    return if @customer.active?
+    @customer.active = true
+    @customer.notes = "activated on #{Time.zone.now}"
+    @customer.save
   end
 
   private
@@ -78,6 +81,6 @@ class CustomersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def customer_params
-    params.require(:customer).permit(:email, :name, :custid, :dob, :active, :notes)
+    params.require(:customer).permit(:email, :first_name, :last_name, :custid, :dob, :active, :notes)
   end
 end

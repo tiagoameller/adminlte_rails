@@ -51,6 +51,8 @@ gem 'simple_form'
 gem 'date_validator'
 # https://github.com/bokmann/font-awesome-rails
 gem 'font-awesome-rails'
+# https://github.com/basecamp/name_of_person
+gem 'name_of_person'
 
 group :development, :test do
   gem 'faker'
