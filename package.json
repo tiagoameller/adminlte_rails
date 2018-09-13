@@ -1,5 +1,5 @@
 {
-  "name": "sisfirma",
+  "name": "adminlte",
   "private": true,
   "dependencies": {
     "admin-lte": "^3.0.0-alpha.2",
