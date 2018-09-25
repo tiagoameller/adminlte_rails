@@ -1,3 +1,6 @@
+# require here all exported coffeescript modules
+DatatableInit = require('./common/datatable_init').datatable_init
+
 window.App ||= {}
 
 class Page
@@ -59,7 +62,7 @@ App.init = ->
       $.rails.confirmed link if result.value
 
   # page specific js
-  new App.DataTableConfig('customers_table') if page.controller('customers') && page.action('index')
+  new App.DatatableInit('customers_table') if page.controller('customers') && page.action('index')
 
 # event binding
 $(document).on "turbolinks:load", -> App.init()

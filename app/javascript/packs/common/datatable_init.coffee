@@ -1,4 +1,6 @@
-class App.DataTableConfig
+module.exports.datatable_init = (selector) -> new App.DatatableInit(selector)
+
+class App.DatatableInit
 
   set_selected_id: (value) -> window["##{@selector}_selected_id"] = value
 
@@ -10,7 +12,7 @@ class App.DataTableConfig
     self = @
     @selector = selector
     @table = $("##{selector}")
-    data_table = self.table.dataTable({
+    datatable = self.table.dataTable({
       ajax: self.table.data('url')
       processing: true
       serverSide: true
@@ -56,7 +58,7 @@ class App.DataTableConfig
         "<i class='fa fa-times-circle'></i></button>"
     ).on 'click', (e) ->
       $('input[type=search]').val('').focus()
-      data_table.fnFilter('')
+      datatable.fnFilter('')
     $('input[type=search]').css('width', '170px')
 
     # set active a row when clicked
@@ -64,3 +66,4 @@ class App.DataTableConfig
       self.set_selected_id($(this).find('td:first >a:first').data('id'))
       $("##{self.selector} tbody tr").removeClass('table-active')
       $(this).addClass('table-active')
+
