@@ -53,6 +53,8 @@ gem 'date_validator'
 gem 'font-awesome-rails'
 # https://github.com/basecamp/name_of_person
 gem 'name_of_person'
+# https://github.com/rails/webpacker
+gem 'webpacker', '~> 3.5'
 
 group :development, :test do
   gem 'faker'
