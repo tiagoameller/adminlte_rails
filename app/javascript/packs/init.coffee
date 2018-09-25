@@ -14,8 +14,6 @@ class Page
       $('body').data('action')
 
 
-@page = new Page
-
 # I18n = {}
 # I18n.defaultLocale = 'es'
 # I18n.locale = "<%= I18n.locale %>"
@@ -23,6 +21,7 @@ class Page
 
 App.init = ->
   self = @
+  page = new Page
   # main inits
   #
   # sets min-with for body to show footer aligned to bottom

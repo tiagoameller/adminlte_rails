@@ -23,6 +23,4 @@
 //= require admin-lte/dist/js/adminlte
 //= require toastr
 //= require sweetalert2/dist/sweetalert2
-//= require init
 //= require cable
-//= require_tree ./custom
