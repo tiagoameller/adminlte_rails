@@ -14,6 +14,7 @@
 //= require jquery-ui/widgets/datepicker
 //= require jquery-ui/i18n/datepicker-es
 //= require jquery_ujs
+//= require active_scaffold
 //= require turbolinks
 //= require icheck/icheck
 //= require bootstrap/dist/js/bootstrap

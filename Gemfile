@@ -55,6 +55,7 @@ gem 'font-awesome-rails'
 gem 'name_of_person'
 # https://github.com/rails/webpacker
 gem 'webpacker', '~> 3.5'
+gem 'active_scaffold'
 
 group :development, :test do
   gem 'faker'
